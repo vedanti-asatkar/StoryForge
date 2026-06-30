@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0f;
+    color: #e8dcc8;
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+#character-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+#character-screen h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 64px;
+    color: #c9a84c;
+    letter-spacing: 8px;
+    text-shadow: 0 0 30px rgba(201, 168, 76, 0.5);
+}
+
+input, select {
+    background: #12121a;
+    border: 1px solid #2a2a3a;
+    color: #e8dcc8;
+    padding: 12px 20px;
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #c9a84c;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 12px 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 3px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #c9a84c;
+    color: #0a0a0f;
+}
+
+#game-screen {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    gap: 0;
+}
+
+#story-text {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 40px;
+    overflow-y: auto;
+    line-height: 1.8;
+    border-right: 1px solid #2a2a3a;
+    white-space: pre-wrap;
+}
+
+#stats {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 30px 20px;
+    border-left: 1px solid #2a2a3a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hp {
+    color: #8b1a1a;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+}
+
+#inventory {
+    color: #c9a84c;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.input-area {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    gap: 10px;
+    padding: 20px 40px;
+    border-top: 1px solid #2a2a3a;
+}
+
+.input-area input {
+    flex: 1;
+    width: auto;
+}

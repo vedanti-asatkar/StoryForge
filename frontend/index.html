@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryForge</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- character creation screen -->
+     <div id="character-screen">
+        <h1>StoryForge</h1>
+        <input type="text", id="player-name" placeholder="Enter your name">
+        <select id="character-class">
+            <option value="archer">Archer</option>
+            <option value="warrior">warrior</option>
+            <option value="mage">Mage</option>
+            <option value="rogue">Rogue</option>
+        </select>
+        <select id="genre">
+            <option value="fantasy">Fantasy</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="horror">Horror</option>
+        </select>
+        <button onclick="startGame()">Begin-Adventure</button>
+     </div>
+
+     <!-- Game screen(Hidden intially) -->
+      <div id="game-screen" style="display: none">
+        <div id="story-text"></div>
+        <div id="stats">
+            <span id="hp">HP:100</span>
+            <span id="inventory">Inventory:[]</span>
+        <div class="input-area">
+    <input type="text" id="player-input" placeholder="What do you do?">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+      <script src="game.js"></script>
+</body>
+</html>
